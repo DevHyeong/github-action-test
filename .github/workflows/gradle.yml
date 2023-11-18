@@ -17,6 +17,7 @@ env:
   AWS_REGION: ap-northeast-2
   EB_ENVIRONMENT_NAME: Demo-env
   EB_APPLICATION_NAME: demo
+  EB_DEPLOYMENT_PACKAGE: docker-compose.yml
 
 jobs:
   build:
@@ -50,4 +51,5 @@ jobs:
         region: ${{ env.AWS_REGION }}
         environment_name: ${{ env.EB_ENVIRONMENT_NAME }}
         application_name: ${{ env.EB_APPLICATION_NAME }}
+        deployment_package: ${{ env.EB_DEPLOYMENT_PACKAGE }}
         version_label: 12345
